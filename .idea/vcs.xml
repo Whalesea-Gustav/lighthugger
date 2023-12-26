@@ -2,23 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/Vulkan-Hpp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/Vulkan-Hpp/Vulkan-Headers" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/Vulkan-Hpp/glfw" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/Vulkan-Hpp/glm" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/Vulkan-Hpp/glslang" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/Vulkan-Hpp/tinyxml2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/VulkanMemoryAllocator-Hpp/VulkanMemoryAllocator" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/dbg-macro" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/dbg-macro/tests/Catch2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/fastgltf" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/glfw" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/imgui" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/meshoptimizer" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/simdjson" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/simple_vulkan_synchronization" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/tony-mc-mapface" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/external/tracy" vcs="Git" />
   </component>
 </project>

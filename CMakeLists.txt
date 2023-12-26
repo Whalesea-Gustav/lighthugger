@@ -27,6 +27,7 @@ target_sources(lighthugger PRIVATE
 )
 
 target_include_directories(lighthugger PRIVATE src external/simple_vulkan_synchronization external/VulkanMemoryAllocator-Hpp/include external/VulkanMemoryAllocator-Hpp/VulkanMemoryAllocator/include external/dbg-macro external/tracy/public external/imgui external/meshoptimizer/src)
+target_include_directories(lighthugger PRIVATE external/glm/)
 target_link_libraries(lighthugger glfw Vulkan::Vulkan fastgltf meshoptimizer zstd)
 target_precompile_headers(lighthugger PRIVATE src/pch.h)
 target_compile_features(lighthugger PUBLIC cxx_std_20)

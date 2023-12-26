@@ -10,3 +10,5 @@ cache/*
 perf.data*
 texconv.exe
 models
+/cmake-build-debug/
+/.idea/

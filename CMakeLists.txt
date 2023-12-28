@@ -7,14 +7,17 @@ add_subdirectory(external/VulkanMemoryAllocator-Hpp)
 add_subdirectory(external/fastgltf)
 add_subdirectory(external/meshoptimizer)
 add_subdirectory(external/glfw)
+add_subdirectory(external/zstd-1.5.5/build/cmake)
+add_subdirectory(external/tracy)
 
+#add_compile_definitions(lighthugger TRACY_ENABLE IMGUI_DEFINE_MATH_OPERATORS)
 add_compile_definitions(lighthugger TRACY_ENABLE IMGUI_DEFINE_MATH_OPERATORS)
 file(GLOB_RECURSE SRC_FILES src/**.cpp)
 add_executable(lighthugger ${SRC_FILES})
 
 target_sources(lighthugger PRIVATE
     # Tracy
-    "external/tracy/public/TracyClient.cpp"
+    #"external/tracy/public/TracyClient.cpp"
     # Imgui
     # https://vkguide.dev/docs/extra-chapter/implementing_imgui/
     "external/imgui/imgui.cpp"
@@ -27,10 +30,12 @@ target_sources(lighthugger PRIVATE
 )
 
 target_include_directories(lighthugger PRIVATE src external/simple_vulkan_synchronization external/VulkanMemoryAllocator-Hpp/include external/VulkanMemoryAllocator-Hpp/VulkanMemoryAllocator/include external/dbg-macro external/tracy/public external/imgui external/meshoptimizer/src)
-target_link_libraries(lighthugger glfw Vulkan::Vulkan fastgltf meshoptimizer zstd)
+include_directories(external/zstd-1.5.5/lib/)
+target_link_libraries(lighthugger glfw Vulkan::Vulkan fastgltf meshoptimizer libzstd_static TracyClient)
 target_precompile_headers(lighthugger PRIVATE src/pch.h)
 target_compile_features(lighthugger PUBLIC cxx_std_20)
-target_compile_options(lighthugger PUBLIC -Wall -Wextra -Wpedantic -Wfatal-errors -fdiagnostics-color=always)
+#target_compile_options(lighthugger PUBLIC -Wall -Wextra -Wpedantic -Wfatal-errors -fdiagnostics-color=always)
+target_compile_options(lighthugger PUBLIC -Wall -Og)
 
 # Use extra warnings when compiling with clang.
 target_compile_options(lighthugger PRIVATE

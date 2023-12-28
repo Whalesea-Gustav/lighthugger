@@ -338,7 +338,7 @@ GltfMesh load_gltf(
                 auto index = descriptor_set.write_image(image, *device);
                 images.push_back(std::move(image));
                 image_indices.push_back(index);
-            } else if (image_path.extension() == ".dds") {
+            } else if (image_path.extension() == ".dds" || image_path.extension() == ".DDS") {
                 auto image = load_dds(
                     image_path,
                     allocator,

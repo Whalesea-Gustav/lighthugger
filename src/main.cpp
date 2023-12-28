@@ -371,7 +371,11 @@ int main() {
     );
 
     auto san_mig = load_gltf(
-        "models/San_Miguel/packed.gltf",
+//        "models/San_Miguel/packed.gltf",
+//        ".\\models\\Sponza\\glTF\\Sponza.gltf",
+//        ".\\models\\VC.gltf",
+//        "./models/SanMiguel293/Separate/results/Separate.gltf",
+        "./models/SanMiguel293/Separate/results/pack.gltf",
         allocator,
         device,
         command_buffer.get().buffer,
@@ -540,7 +544,8 @@ int main() {
             temp_buffers
         ),
         .skybox = load_dds(
-            "hdr-cubemap-1024x1024.dds",
+//            "hdr-cubemap-1024.dds",
+            "kloofendal_43d_clear_puresky_2k.DDS",
             allocator,
             device,
             command_buffer.get().buffer,

@@ -11,7 +11,8 @@ renderdoc.cap
 cache/*
 perf.data*
 texconv.exe
-cmake-build-debug-mingw/models
-/cmake-build-debug-visualstudio2022/
 /.idea
 /cmake-build-debug-mingw/
+models
+/cmake-build-debug/
+

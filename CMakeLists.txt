@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.20)
 
 project(lighthugger)
 
+set(CMAKE_CXX_STANDARD 20)
+
 find_package(Vulkan REQUIRED)
 add_subdirectory(external/VulkanMemoryAllocator-Hpp)
 add_subdirectory(external/fastgltf)
@@ -30,8 +32,12 @@ target_sources(lighthugger PRIVATE
 )
 
 target_include_directories(lighthugger PRIVATE src external/simple_vulkan_synchronization external/VulkanMemoryAllocator-Hpp/include external/VulkanMemoryAllocator-Hpp/VulkanMemoryAllocator/include external/dbg-macro external/tracy/public external/imgui external/meshoptimizer/src)
+
 include_directories(external/zstd-1.5.5/lib/)
 target_link_libraries(lighthugger glfw Vulkan::Vulkan fastgltf meshoptimizer libzstd_static TracyClient)
+target_include_directories(lighthugger PRIVATE external/glm/)
+
+
 target_precompile_headers(lighthugger PRIVATE src/pch.h)
 target_compile_features(lighthugger PUBLIC cxx_std_20)
 #target_compile_options(lighthugger PUBLIC -Wall -Wextra -Wpedantic -Wfatal-errors -fdiagnostics-color=always)

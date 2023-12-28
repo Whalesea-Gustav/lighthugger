@@ -6,6 +6,8 @@ traces
 renderdoc.cap
 *.dds
 *.ktx2
+*.blend
+*.blend1
 cache/*
 perf.data*
 texconv.exe
